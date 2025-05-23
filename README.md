@@ -22,7 +22,7 @@ Uma extensão Chrome inteligente que detecta vieses, verifica fatos e sugere fon
 
 1. **Clone ou baixe este repositório**
    ```bash
-   git clone https://github.com/seu-usuario/detector-vies-desinformacao.git
+   git clone https://github.com/dougdotcon/detector-vies-desinformacao.git
    cd detector-vies-desinformacao
    ```
 
@@ -135,9 +135,9 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 📞 Suporte
 
-- **Issues**: [GitHub Issues](https://github.com/seu-usuario/detector-vies-desinformacao/issues)
+- **Issues**: [GitHub Issues](https://github.com/dougdotcon/detector-vies-desinformacao/issues)
 - **Email**: suporte@detectorvies.com
-- **Documentação**: [Wiki do projeto](https://github.com/seu-usuario/detector-vies-desinformacao/wiki)
+- **Documentação**: [Wiki do projeto](https://github.com/dougdotcon/detector-vies-desinformacao/wiki)
 
 ## 📄 Licença
 
