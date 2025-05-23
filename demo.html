@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Detector de Viés e Desinformação</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .article {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .article h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-instruction {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
+        .bias-example {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .neutral-example {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .test-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+        }
+        
+        .instructions {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Demo - Detector de Viés e Desinformação</h1>
+        
+        <div class="instructions">
+            <h3>📋 Como Testar a Extensão</h3>
+            <ol>
+                <li>Certifique-se de que a extensão está instalada e configurada</li>
+                <li>Selecione qualquer texto nos exemplos abaixo</li>
+                <li>Clique no botão "🔍 Analisar" que aparece</li>
+                <li>Veja os resultados no popup da extensão</li>
+            </ol>
+        </div>
+        
+        <div class="highlight-instruction">
+            <strong>💡 Dica:</strong> Selecione diferentes trechos de texto para testar a detecção de viés. 
+            Textos com linguagem mais neutra receberão pontuações melhores.
+        </div>
+        
+        <div class="article">
+            <h2>Exemplo 1: Texto com Alto Viés</h2>
+            <div class="article-meta">Fonte: Site Fictício | Data: Hoje</div>
+            
+            <div class="bias-example">
+                <p><strong>EXCLUSIVO E CHOCANTE:</strong> Descoberta bombástica revela que TODOS os políticos estão envolvidos em esquema inacreditável que a mídia mainstream não quer que você saiba! Especialistas afirmam que essa é obviamente a maior conspiração da história, e é óbvio que eles sempre souberam disso. Nunca antes visto algo tão terrível e devastador para nossa democracia!</p>
+                
+                <p>Segundo fontes anônimas, dizem que há uma verdade oculta por trás de tudo isso. É claramente uma tentativa da elite global de controlar a população através de fake news espalhadas pela grande mídia. Todo mundo sabe que isso é verdade, mas ninguém tem coragem de falar!</p>
+            </div>
+        </div>
+        
+        <div class="article">
+            <h2>Exemplo 2: Texto Neutro e Equilibrado</h2>
+            <div class="article-meta">Fonte: Jornal Confiável | Data: Hoje</div>
+            
+            <div class="neutral-example">
+                <p>De acordo com relatório publicado pelo Instituto de Pesquisa Econômica, os dados mostram uma variação de 3,2% no índice de inflação durante o último trimestre. O estudo, baseado em análise de 1.200 estabelecimentos comerciais, foi conduzido por pesquisadores da Universidade Federal.</p>
+                
+                <p>Segundo o professor Dr. João Silva, especialista em economia da instituição, "os números refletem uma tendência observada em outros países da região". O Ministério da Economia confirmou que está acompanhando os indicadores e deve divulgar medidas específicas na próxima semana.</p>
+                
+                <p>A pesquisa completa está disponível no site oficial do instituto e inclui metodologia detalhada e margem de erro de 2,1%.</p>
+            </div>
+        </div>
+        
+        <div class="article">
+            <h2>Exemplo 3: Texto com Viés Médio</h2>
+            <div class="article-meta">Fonte: Blog de Opinião | Data: Hoje</div>
+            
+            <p>A nova política econômica anunciada pelo governo é claramente controversa e tem gerado debates acalorados. Alguns especialistas consideram as medidas necessárias, enquanto outros afirmam que são insuficientes para resolver os problemas atuais.</p>
+            
+            <p>É importante notar que sempre há resistência a mudanças significativas, mas desta vez parece que a situação é diferente. Muitos analistas acreditam que essas decisões podem ter impactos duradouros na economia nacional.</p>
+            
+            <p>Obviamente, apenas o tempo dirá se essas medidas serão eficazes, mas é inegável que representam uma mudança de direção importante na política econômica do país.</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>🧪 Área de Teste Livre</h2>
+            <p>Use o espaço abaixo para colar e testar seus próprios textos:</p>
+            
+            <div style="border: 2px dashed #ccc; padding: 20px; margin: 20px 0; min-height: 100px; background: white;">
+                <p><em>Cole aqui qualquer texto que você queira analisar...</em></p>
+                <p>Por exemplo, trechos de notícias, posts de redes sociais, ou qualquer conteúdo que você suspeite ter viés ou desinformação.</p>
+            </div>
+        </div>
+        
+        <div class="article">
+            <h2>Exemplo 4: Texto com Indicadores de Desinformação</h2>
+            <div class="article-meta">Fonte: Rede Social | Data: Hoje</div>
+            
+            <div class="bias-example">
+                <p>🚨 URGENTE! Médicos descobriram método revolucionário que a indústria farmacêutica não quer que você conheça! Este tratamento milagroso cura TUDO e é 100% natural!</p>
+                
+                <p>Pesquisas mostram (mas eles escondem os resultados) que esse método incrível já salvou milhões de vidas. Compartilhe antes que removam este post! A mídia nunca vai falar sobre isso porque não dá lucro para as grandes corporações.</p>
+                
+                <p>TODOS os médicos sabem disso, mas são proibidos de falar. É uma conspiração global para manter as pessoas doentes e dependentes de remédios caros!</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #e7f3ff; border-radius: 8px;">
+            <h3>🎯 Objetivo do Teste</h3>
+            <p>Esta página demonstra como a extensão pode identificar diferentes níveis de viés e possíveis desinformações em textos. 
+            Teste selecionando os diferentes exemplos e compare os resultados!</p>
+        </div>
+    </div>
+</body>
+</html>
