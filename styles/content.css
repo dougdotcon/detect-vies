@@ -1,0 +1,241 @@
+/* Content Script Styles - Estilos injetados nas páginas */
+
+/* Botão de análise que aparece na seleção */
+#bias-detector-button {
+    position: absolute !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    border: 2px solid white !important;
+    display: none !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    transition: transform 0.2s !important;
+    user-select: none !important;
+    pointer-events: auto !important;
+}
+
+#bias-detector-button:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+}
+
+#bias-detector-button:active {
+    transform: scale(0.95) !important;
+}
+
+/* Overlay para resultados inline (futuro) */
+.bias-detector-overlay {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+    z-index: 10001 !important;
+    max-width: 500px !important;
+    width: 90% !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+}
+
+.bias-detector-overlay-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 20px !important;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.bias-detector-overlay-content {
+    padding: 20px !important;
+}
+
+.bias-detector-overlay-close {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    background: rgba(255,255,255,0.2) !important;
+    border: none !important;
+    color: white !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+}
+
+/* Destaque de texto suspeito */
+.bias-detector-highlight {
+    background-color: rgba(255, 193, 7, 0.3) !important;
+    border-left: 3px solid #ffc107 !important;
+    padding-left: 5px !important;
+    position: relative !important;
+}
+
+.bias-detector-highlight::before {
+    content: "⚠️" !important;
+    position: absolute !important;
+    left: -15px !important;
+    top: 0 !important;
+    font-size: 12px !important;
+}
+
+.bias-detector-highlight-high {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    border-left-color: #dc3545 !important;
+}
+
+.bias-detector-highlight-medium {
+    background-color: rgba(255, 193, 7, 0.2) !important;
+    border-left-color: #ffc107 !important;
+}
+
+.bias-detector-highlight-low {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    border-left-color: #28a745 !important;
+}
+
+/* Tooltip para informações rápidas */
+.bias-detector-tooltip {
+    position: absolute !important;
+    background: #333 !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    z-index: 10002 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s !important;
+    max-width: 200px !important;
+    word-wrap: break-word !important;
+}
+
+.bias-detector-tooltip.show {
+    opacity: 1 !important;
+}
+
+.bias-detector-tooltip::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    margin-left: -5px !important;
+    border-width: 5px !important;
+    border-style: solid !important;
+    border-color: #333 transparent transparent transparent !important;
+}
+
+/* Indicador de carregamento */
+.bias-detector-loading {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    border: 2px solid #f3f3f3 !important;
+    border-top: 2px solid #667eea !important;
+    border-radius: 50% !important;
+    animation: bias-detector-spin 1s linear infinite !important;
+    margin-left: 8px !important;
+}
+
+@keyframes bias-detector-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Badge de credibilidade */
+.bias-detector-credibility-badge {
+    display: inline-block !important;
+    background: #667eea !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 10px !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    margin-left: 5px !important;
+    vertical-align: middle !important;
+}
+
+.bias-detector-credibility-high {
+    background: #28a745 !important;
+}
+
+.bias-detector-credibility-medium {
+    background: #ffc107 !important;
+    color: #333 !important;
+}
+
+.bias-detector-credibility-low {
+    background: #dc3545 !important;
+}
+
+/* Overlay de fundo */
+.bias-detector-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0,0,0,0.5) !important;
+    z-index: 10000 !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .bias-detector-overlay {
+        width: 95% !important;
+        max-height: 90vh !important;
+    }
+    
+    #bias-detector-button {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+    }
+}
+
+/* Prevenir conflitos com outros estilos */
+.bias-detector-overlay * {
+    box-sizing: border-box !important;
+}
+
+/* Animações */
+@keyframes bias-detector-fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.bias-detector-overlay.show {
+    animation: bias-detector-fade-in 0.3s ease-out !important;
+}
+
+/* Estados de texto */
+.bias-detector-text-suspicious {
+    background: linear-gradient(90deg, rgba(255,193,7,0.1) 0%, rgba(255,193,7,0.3) 50%, rgba(255,193,7,0.1) 100%) !important;
+    background-size: 200% 100% !important;
+    animation: bias-detector-pulse 2s ease-in-out infinite !important;
+}
+
+@keyframes bias-detector-pulse {
+    0%, 100% {
+        background-position: 200% 0;
+    }
+    50% {
+        background-position: 0% 0;
+    }
+}

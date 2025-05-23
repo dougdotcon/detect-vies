@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Viés</title>
+    <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Detector de Viés</h1>
+            <p class="subtitle">Análise de texto selecionado</p>
+        </header>
+        
+        <main>
+            <div id="no-selection" class="message">
+                <p>📝 Selecione um texto na página para analisar</p>
+                <small>Destaque qualquer trecho de notícia ou post para verificar vieses e fatos</small>
+            </div>
+            
+            <div id="analysis-section" class="hidden">
+                <div class="selected-text">
+                    <h3>Texto Selecionado:</h3>
+                    <div id="selected-text-content" class="text-content"></div>
+                </div>
+                
+                <div class="actions">
+                    <button id="analyze-btn" class="btn-primary">
+                        🔍 Analisar Viés e Fatos
+                    </button>
+                </div>
+                
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Analisando texto...</p>
+                </div>
+                
+                <div id="results" class="hidden">
+                    <div class="result-section">
+                        <h3>📊 Análise de Viés</h3>
+                        <div id="bias-analysis" class="analysis-content"></div>
+                    </div>
+                    
+                    <div class="result-section">
+                        <h3>✅ Verificação de Fatos</h3>
+                        <div id="fact-check" class="analysis-content"></div>
+                    </div>
+                    
+                    <div class="result-section">
+                        <h3>📚 Fontes Confiáveis</h3>
+                        <div id="reliable-sources" class="sources-list"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <button id="settings-btn" class="btn-secondary">⚙️ Configurações</button>
+            <button id="clear-btn" class="btn-secondary">🗑️ Limpar</button>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

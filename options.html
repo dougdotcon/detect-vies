@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Detector de Viés</title>
+    <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ Configurações</h1>
+            <p>Configure as APIs e preferências do Detector de Viés</p>
+        </header>
+
+        <main>
+            <form id="settings-form">
+                <section class="settings-section">
+                    <h2>🔑 Chaves de API</h2>
+                    <p class="section-description">
+                        Configure suas chaves de API para habilitar todas as funcionalidades
+                    </p>
+
+                    <div class="form-group">
+                        <label for="openai-api-key">
+                            <strong>OpenAI API Key</strong>
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="password" 
+                            id="openai-api-key" 
+                            placeholder="sk-..."
+                            autocomplete="off"
+                        >
+                        <small>
+                            Necessária para análise de viés com GPT-4o mini. 
+                            <a href="https://platform.openai.com/api-keys" target="_blank">Obter chave</a>
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="google-api-key">
+                            <strong>Google API Key</strong>
+                            <span class="optional">(opcional)</span>
+                        </label>
+                        <input 
+                            type="password" 
+                            id="google-api-key" 
+                            placeholder="AIza..."
+                            autocomplete="off"
+                        >
+                        <small>
+                            Para verificação de fatos com Google Fact Check Tools. 
+                            <a href="https://console.developers.google.com/" target="_blank">Obter chave</a>
+                        </small>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>🎯 Preferências de Análise</h2>
+                    
+                    <div class="form-group">
+                        <label for="analysis-level">
+                            <strong>Nível de Análise</strong>
+                        </label>
+                        <select id="analysis-level">
+                            <option value="basic">Básico - Análise rápida</option>
+                            <option value="medium">Médio - Análise balanceada</option>
+                            <option value="detailed">Detalhado - Análise completa</option>
+                        </select>
+                        <small>
+                            Níveis mais detalhados consomem mais tokens da API
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="auto-highlight">
+                            <span class="checkmark"></span>
+                            Destacar automaticamente texto suspeito
+                        </label>
+                        <small>
+                            Destaca visualmente trechos com possível viés nas páginas
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-notifications">
+                            <span class="checkmark"></span>
+                            Mostrar notificações
+                        </label>
+                        <small>
+                            Exibe alertas quando conteúdo suspeito é detectado
+                        </small>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>📊 Estatísticas</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-analyses">0</span>
+                            <span class="stat-label">Análises realizadas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="bias-detected">0</span>
+                            <span class="stat-label">Vieses detectados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="facts-checked">0</span>
+                            <span class="stat-label">Fatos verificados</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>ℹ️ Sobre</h2>
+                    <div class="about-content">
+                        <p>
+                            <strong>Detector de Viés e Desinformação v1.0.0</strong><br>
+                            Uma extensão para identificar vieses e verificar fatos em textos online.
+                        </p>
+                        <p>
+                            <strong>Funcionalidades:</strong>
+                        </p>
+                        <ul>
+                            <li>✅ Análise de viés com IA</li>
+                            <li>✅ Verificação de fatos</li>
+                            <li>✅ Sugestões de fontes confiáveis</li>
+                            <li>✅ Destaque de conteúdo suspeito</li>
+                        </ul>
+                        <p>
+                            <strong>Privacidade:</strong> Seus dados são processados localmente e via APIs seguras. 
+                            Nenhuma informação pessoal é armazenada.
+                        </p>
+                    </div>
+                </section>
+            </form>
+        </main>
+
+        <footer>
+            <div class="button-group">
+                <button type="button" id="test-apis" class="btn-secondary">
+                    🧪 Testar APIs
+                </button>
+                <button type="button" id="reset-settings" class="btn-secondary">
+                    🔄 Restaurar Padrões
+                </button>
+                <button type="submit" id="save-settings" class="btn-primary">
+                    💾 Salvar Configurações
+                </button>
+            </div>
+            
+            <div id="status-message" class="hidden"></div>
+        </footer>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

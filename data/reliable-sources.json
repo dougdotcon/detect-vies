@@ -1,0 +1,137 @@
+{
+  "sources": [
+    {
+      "name": "BBC Brasil",
+      "domain": "bbc.com",
+      "category": "internacional",
+      "credibility": 9,
+      "description": "Serviço de notícias da BBC em português",
+      "specialties": ["política", "economia", "internacional"]
+    },
+    {
+      "name": "Folha de S.Paulo",
+      "domain": "folha.uol.com.br",
+      "category": "nacional",
+      "credibility": 8,
+      "description": "Um dos principais jornais brasileiros",
+      "specialties": ["política", "economia", "cultura"]
+    },
+    {
+      "name": "G1",
+      "domain": "g1.globo.com",
+      "category": "nacional",
+      "credibility": 8,
+      "description": "Portal de notícias da Globo",
+      "specialties": ["geral", "política", "economia", "esportes"]
+    },
+    {
+      "name": "Reuters",
+      "domain": "reuters.com",
+      "category": "internacional",
+      "credibility": 9,
+      "description": "Agência de notícias internacional",
+      "specialties": ["economia", "política", "tecnologia"]
+    },
+    {
+      "name": "Associated Press",
+      "domain": "apnews.com",
+      "category": "internacional",
+      "credibility": 9,
+      "description": "Agência de notícias americana",
+      "specialties": ["política", "internacional", "breaking news"]
+    },
+    {
+      "name": "O Estado de S. Paulo",
+      "domain": "estadao.com.br",
+      "category": "nacional",
+      "credibility": 8,
+      "description": "Jornal tradicional brasileiro",
+      "specialties": ["política", "economia", "opinião"]
+    },
+    {
+      "name": "UOL",
+      "domain": "uol.com.br",
+      "category": "nacional",
+      "credibility": 7,
+      "description": "Portal de notícias brasileiro",
+      "specialties": ["geral", "entretenimento", "esportes"]
+    },
+    {
+      "name": "Agência Lupa",
+      "domain": "lupa.news",
+      "category": "fact-check",
+      "credibility": 9,
+      "description": "Agência especializada em fact-checking",
+      "specialties": ["verificação de fatos", "política"]
+    },
+    {
+      "name": "Aos Fatos",
+      "domain": "aosfatos.org",
+      "category": "fact-check",
+      "credibility": 9,
+      "description": "Organização de checagem de fatos",
+      "specialties": ["verificação de fatos", "política", "saúde"]
+    },
+    {
+      "name": "Projeto Comprova",
+      "domain": "projetocomprova.com.br",
+      "category": "fact-check",
+      "credibility": 9,
+      "description": "Coalizão de veículos para checagem de fatos",
+      "specialties": ["verificação de fatos", "eleições"]
+    },
+    {
+      "name": "El País Brasil",
+      "domain": "brasil.elpais.com",
+      "category": "nacional",
+      "credibility": 8,
+      "description": "Versão brasileira do jornal espanhol",
+      "specialties": ["política", "cultura", "internacional"]
+    },
+    {
+      "name": "The Guardian",
+      "domain": "theguardian.com",
+      "category": "internacional",
+      "credibility": 8,
+      "description": "Jornal britânico independente",
+      "specialties": ["política", "meio ambiente", "tecnologia"]
+    },
+    {
+      "name": "Nexo Jornal",
+      "domain": "nexojornal.com.br",
+      "category": "nacional",
+      "credibility": 8,
+      "description": "Jornal digital brasileiro",
+      "specialties": ["análise", "dados", "política"]
+    },
+    {
+      "name": "Valor Econômico",
+      "domain": "valor.globo.com",
+      "category": "economia",
+      "credibility": 8,
+      "description": "Jornal especializado em economia",
+      "specialties": ["economia", "mercado financeiro", "negócios"]
+    },
+    {
+      "name": "Agência Brasil",
+      "domain": "agenciabrasil.ebc.com.br",
+      "category": "nacional",
+      "credibility": 7,
+      "description": "Agência pública de notícias",
+      "specialties": ["governo", "política pública", "social"]
+    }
+  ],
+  "categories": {
+    "nacional": "Veículos brasileiros de notícias gerais",
+    "internacional": "Veículos internacionais confiáveis",
+    "fact-check": "Organizações especializadas em verificação de fatos",
+    "economia": "Veículos especializados em economia e negócios"
+  },
+  "credibility_levels": {
+    "9": "Altamente confiável",
+    "8": "Confiável",
+    "7": "Moderadamente confiável",
+    "6": "Verificar com cautela"
+  },
+  "last_updated": "2024-01-15T00:00:00Z"
+}

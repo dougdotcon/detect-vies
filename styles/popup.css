@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    min-height: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.container {
+    background: white;
+    margin: 0;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.message p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.message small {
+    font-size: 12px;
+    color: #999;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.selected-text {
+    margin-bottom: 20px;
+}
+
+.selected-text h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.actions {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result-section {
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.result-section h3 {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.analysis-content {
+    padding: 15px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.sources-list {
+    padding: 15px;
+}
+
+.source-item {
+    display: block;
+    color: #667eea;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 12px;
+}
+
+.source-item:hover {
+    background: #f8f9fa;
+}
+
+.source-item:last-child {
+    border-bottom: none;
+}
+
+footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secondary {
+    flex: 1;
+    background: #f8f9fa;
+    color: #666;
+    border: 1px solid #e9ecef;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+}
+
+.bias-level {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.bias-low {
+    background: #d4edda;
+    color: #155724;
+}
+
+.bias-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.bias-high {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.fact-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.fact-true {
+    background: #d4edda;
+    color: #155724;
+}
+
+.fact-false {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.fact-mixed {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.fact-unknown {
+    background: #e2e3e5;
+    color: #383d41;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "detector-vies-desinformacao",
+  "version": "1.0.0",
+  "description": "Extensão Chrome para detectar vieses e verificar fatos em textos online",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Extensão pronta para instalação'",
+    "test": "echo 'Testes não implementados ainda'",
+    "lint": "echo 'Linting não configurado ainda'",
+    "package": "zip -r detector-vies-v1.0.0.zip . -x node_modules/\\* .git/\\* *.zip"
+  },
+  "keywords": [
+    "chrome-extension",
+    "bias-detection",
+    "fact-checking",
+    "misinformation",
+    "journalism",
+    "ai",
+    "gpt-4",
+    "openai"
+  ],
+  "author": "Detector de Viés Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/detector-vies-desinformacao"
+  },
+  "bugs": {
+    "url": "https://github.com/seu-usuario/detector-vies-desinformacao/issues"
+  },
+  "homepage": "https://github.com/seu-usuario/detector-vies-desinformacao#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
