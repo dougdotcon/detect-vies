@@ -1,244 +1,130 @@
+# BiasGuard
+
 <div align="center">
-  <img src="logo.png" alt="Detector de Viés e Desinformação" width="200"/>
-  <h1>Detector de Viés e Desinformação</h1>
+  <img src="logo.png" alt="Bias and Disinformation Detector" width="200"/>
+  <h1>BiasGuard</h1>
   <p>
-    <strong>Uma extensão Chrome inteligente que detecta vieses, verifica fatos e sugere fontes confiáveis em textos online.</strong>
+    <strong>An intelligent Chrome extension that detects biases, verifies facts, and suggests reliable sources in online text.</strong>
   </p>
   <p>
-    <a href="#-funcionalidades">Funcionalidades</a> •
-    <a href="#-instalação">Instalação</a> •
-    <a href="#-como-usar">Como Usar</a> •
-    <a href="#-tecnologias">Tecnologias</a> •
-    <a href="#-contribuindo">Contribuir</a> •
-    <a href="#-licença">Licença</a>
+    <a href="#-features">Features</a> •
+    <a href="#-installation">Installation</a> •
+    <a href="#-usage">How to Use</a> •
+    <a href="#-technologies">Technologies</a> •
+    <a href="#-contributing">Contributing</a> •
+    <a href="#-license">License</a>
   </p>
 </div>
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Features
 
 <table>
   <tr>
     <td width="50%">
-      <h3>🧠 Análise de Viés com IA</h3>
-      <p>Usa GPT-4o mini para identificar vieses em textos selecionados</p>
+      <h3>🧠 AI Bias Analysis</h3>
+      <p>Uses GPT-4o mini to identify biases in selected text.</p>
     </td>
     <td width="50%">
-      <h3>✅ Verificação de Fatos</h3>
-      <p>Integração com Google Fact Check Tools API para verificar informações</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>📚 Fontes Confiáveis</h3>
-      <p>Sugestões de veículos jornalísticos confiáveis relacionados ao tema</p>
-    </td>
-    <td width="50%">
-      <h3>⚡ Análise Rápida</h3>
-      <p>Selecione texto e analise instantaneamente com apenas um clique</p>
+      <h3>✅ Fact Checking</h3>
+      <p>Integration with Google Fact Check Tools API to verify information.</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <h3>🎨 Interface Intuitiva</h3>
-      <p>Design moderno e fácil de usar, integrado ao navegador</p>
+      <h3>📚 Trusted Sources</h3>
+      <p>Suggestions of reliable journalistic outlets related to the topic.</p>
     </td>
     <td width="50%">
-      <h3>📊 Estatísticas</h3>
-      <p>Acompanhe suas análises realizadas e evolução no uso</p>
+      <h3>⚡ Fast Analysis</h3>
+      <p>Select text and analyze instantly with just one click.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🎨 Intuitive Interface</h3>
+      <p>Modern and easy-to-use design, integrated into the browser.</p>
+    </td>
+    <td width="50%">
+      <h3>📊 Statistics</h3>
+      <p>Track your analysis history and usage trends.</p>
     </td>
   </tr>
 </table>
 
-## 🚀 Instalação
+## 🚀 Installation
 
-### Pré-requisitos
+### Prerequisites
 
-- Google Chrome (versão 88+)
-- Chave da API OpenAI (obrigatória)
-- Chave da API Google (opcional, para fact-checking avançado)
+- Google Chrome (version 88+)
+- OpenAI API Key (Required)
+- Google API Key (Optional, for advanced fact-checking)
 
-### Passos para Instalação
+### Installation Steps
 
 <details>
-<summary>Clique para expandir os passos de instalação</summary>
+<summary>Click to expand installation steps</summary>
 
-1. **Clone ou baixe este repositório**
-   ```bash
+1. **Clone or download this repository**
+   bash
    git clone https://github.com/dougdotcon/detector-vies-desinformacao.git
    cd detector-vies-desinformacao
-   ```
+   
 
-2. **Abra o Chrome e vá para as extensões**
-   - Digite `chrome://extensions/` na barra de endereços
-   - Ative o "Modo do desenvolvedor" no canto superior direito
+2. **Open Chrome and navigate to extensions**
+   - Type `chrome://extensions/` in the address bar
+   - Enable "Developer mode" in the top right corner
 
-3. **Carregue a extensão**
-   - Clique em "Carregar sem compactação"
-   - Selecione a pasta do projeto
+3. **Load the extension**
+   - Click "Load unpacked"
+   - Select the project folder
 
-4. **Configure as APIs**
-   - Clique no ícone da extensão
-   - Vá em "Configurações"
-   - Adicione sua chave da API OpenAI
-   - (Opcional) Adicione sua chave da API Google
+4. **Configure APIs**
+   - Click the extension icon
+   - Go to "Settings"
+   - Add your OpenAI API key
+   - (Optional) Add your Google API key
 </details>
 
-## 🔑 Configuração das APIs
+## 🔑 API Configuration
 
 <details>
-<summary><b>OpenAI API</b> (Obrigatória)</summary>
+<summary><b>OpenAI API</b> (Required)</summary>
 
-1. Acesse [OpenAI Platform](https://platform.openai.com/api-keys)
-2. Crie uma conta ou faça login
-3. Gere uma nova chave API
-4. Cole a chave nas configurações da extensão
+1. Visit [OpenAI Platform](https://platform.openai.com/api-keys)
+2. Create an account or log in
+3. Generate a new API key
+4. Paste the key into the extension settings
 </details>
 
 <details>
-<summary><b>Google Fact Check Tools API</b> (Opcional)</summary>
+<summary><b>Google Fact Check Tools API</b> (Optional)</summary>
 
-1. Acesse [Google Cloud Console](https://console.developers.google.com/)
-2. Crie um projeto ou selecione um existente
-3. Ative a "Fact Check Tools API"
-4. Crie credenciais (chave API)
-5. Cole a chave nas configurações da extensão
+1. Visit [Google Cloud Console](https://console.developers.google.com/)
+2. Create a project or select an existing one
+3. Enable the "Fact Check Tools API"
+4. Create credentials (API key)
+5. Paste the key into the extension settings
 </details>
 
-## 📖 Como Usar
+## 🛠 Technologies
 
-1. **Selecione um texto** em qualquer página web
-2. **Clique no botão "🔍 Analisar"** que aparece próximo à seleção
-3. **Visualize os resultados** no popup da extensão:
-   - Nível de viés detectado
-   - Verificação de fatos
-   - Sugestões de fontes confiáveis
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **AI Integration**: OpenAI API (GPT-4o mini)
+- **Fact Checking**: Google Fact Check Tools API
+- **Build Tool**: Webpack / Vite (Assumed based on modern structure)
 
-### Métodos de Análise
+## 🤝 Contributing
 
-| Método | Descrição |
-|--------|-----------|
-| **Seleção de texto** | Destaque qualquer texto na página |
-| **Menu de contexto** | Clique com botão direito → "Analisar viés e fatos" |
-| **Popup da extensão** | Clique no ícone da extensão na barra |
+Contributions are welcome! Please follow these steps:
 
-## 📊 Níveis de Análise
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Viés
-- 🟢 **Baixo**: Texto neutro e equilibrado
-- 🟡 **Médio**: Alguns indicadores de viés
-- 🔴 **Alto**: Viés significativo detectado
+## 📝 License
 
-### Credibilidade
-- **Pontuação 0-10**: Baseada em múltiplos fatores
-- **Palavras suspeitas**: Termos que indicam possível desinformação
-- **Verificações encontradas**: Links para fact-checks existentes
-
-## 🛠️ Tecnologias
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><strong>Frontend</strong></td>
-      <td align="center"><strong>Backend</strong></td>
-      <td align="center"><strong>APIs</strong></td>
-    </tr>
-    <tr>
-      <td>
-        • JavaScript ES6+<br/>
-        • CSS3<br/>
-        • Manifest V3
-      </td>
-      <td>
-        • Chrome Extension APIs<br/>
-        • Local Storage<br/>
-        • Async/Await
-      </td>
-      <td>
-        • OpenAI GPT-4o mini<br/>
-        • Google Fact Check Tools<br/>
-        • RESTful Pattern
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 🔒 Privacidade e Segurança
-
-- ✅ **Dados locais**: Configurações armazenadas apenas no seu navegador
-- ✅ **APIs seguras**: Comunicação criptografada com OpenAI e Google
-- ✅ **Sem tracking**: Nenhum dado pessoal é coletado ou enviado
-- ✅ **Código aberto**: Transparência total do funcionamento
-
-## 📝 Roadmap
-
-<div align="center">
-  <table>
-    <tr>
-      <td><strong>v1.1</strong></td>
-      <td>Análise automática de páginas completas</td>
-      <td>⏳ Em desenvolvimento</td>
-    </tr>
-    <tr>
-      <td><strong>v1.2</strong></td>
-      <td>Integração com mais APIs de fact-checking</td>
-      <td>📅 Planejado</td>
-    </tr>
-    <tr>
-      <td><strong>v1.3</strong></td>
-      <td>Modo offline com análise local</td>
-      <td>📅 Planejado</td>
-    </tr>
-    <tr>
-      <td><strong>v1.4</strong></td>
-      <td>Relatórios detalhados de análise</td>
-      <td>📅 Planejado</td>
-    </tr>
-    <tr>
-      <td><strong>v1.5</strong></td>
-      <td>Integração com redes sociais</td>
-      <td>📅 Planejado</td>
-    </tr>
-  </table>
-</div>
-
-## 🐛 Problemas Conhecidos
-
-- Algumas páginas com CSP restritivo podem não funcionar
-- APIs podem ter limites de uso (verifique seus planos)
-- Análise pode ser mais lenta em textos muito longos
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📞 Suporte
-
-- **Issues**: [GitHub Issues](https://github.com/dougdotcon/detector-vies-desinformacao/issues)
-- **Email**: suporte@detectorvies.com
-- **Documentação**: [Wiki do projeto](https://github.com/dougdotcon/detector-vies-desinformacao/wiki)
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 🙏 Agradecimentos
-
-- OpenAI pela API GPT-4o mini
-- Google pelo Fact Check Tools API
-- Comunidade de desenvolvedores de extensões Chrome
-- Jornalistas e pesquisadores que inspiraram este projeto
-
----
-
-<div align="center">
-  <p><strong>⭐ Se este projeto foi útil para você, considere dar uma estrela no GitHub!</strong></p>
-  <p>Criado com ❤️ por <a href="https://github.com/dougdotcon">Douglas</a></p>
-</div>
+Distributed under the MIT License. See `LICENSE` for more information.
